@@ -28,7 +28,7 @@ filelock==3.19.1
 filetype==1.2.0
 flatten-json==0.1.14
 fonttools==4.59.1
-ftb-snbt-lib==0.4.0
+ftb-snbt-lib==0.4.1
 gitdb==4.0.12
 GitPython==3.1.45
 google-ai-generativelanguage==0.6.18
@@ -62,6 +62,7 @@ langchain-google-genai==2.1.9
 langchain-openai==0.3.33
 langchain-text-splitters==0.3.9
 langsmith==0.4.14
+libretranslatepy==2.1.4
 lxml==6.0.0
 Markdown==3.8.2
 markdownlit==0.0.7
