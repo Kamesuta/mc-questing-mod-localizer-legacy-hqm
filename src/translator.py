@@ -18,6 +18,7 @@ import googletrans
 import deepl
 import tiktoken
 import langchain
+from libretranslatepy import LibreTranslateAPI
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableLambda
@@ -27,7 +28,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 
 from src.utils import get_session_id
-from src.constants import LLM_PROMPT, MINECRAFT_LANGUAGES, MINECRAFT_TO_DEEPL, MINECRAFT_TO_GOOGLE
+from src.constants import LLM_PROMPT, MINECRAFT_LANGUAGES, MINECRAFT_TO_DEEPL, MINECRAFT_TO_GOOGLE, MINECRAFT_TO_LIBRE
 
 def escape_text(text: str) -> str:
     '''Escape special characters to prevent translation API from altering them.'''
@@ -293,7 +294,7 @@ class DeepLTranslator(MachineTranslator):
     lang_list: List[str] = list(MINECRAFT_TO_DEEPL)
     languages: Dict = MINECRAFT_TO_DEEPL
 
-    def init_translator(self, auth_key: str) -> int:
+    def init_translator(self, auth_key: str):
         self.translator = deepl.DeepLClient(auth_key)
     
     @st.cache_data(ttl=60)
@@ -317,6 +318,25 @@ class DeepLTranslator(MachineTranslator):
             preserve_formatting=True
         )
 
+# class LibreTranslator(MachineTranslator):
+#     logger: logging.Logger
+#     translator: LibreTranslateAPI
+#     lang_list: List[str] = list(MINECRAFT_TO_LIBRE)
+#     languages: Dict = MINECRAFT_TO_LIBRE
+    
+#     def init_translator(self, auth_key: str = None):
+#         self.translator = LibreTranslateAPI(api_key=auth_key)
+    
+#     @st.cache_data(ttl=60)
+#     @staticmethod
+#     def check_auth_key(auth_key: str = None) -> int:
+#         try:
+#             lt = LibreTranslateAPI(api_key=auth_key)
+#             test = lt.translate("ping", "en", "es")
+#             return 1
+#         except:
+#             return 0
+    
 class LLMTranslator(BaseTranslator, ABC):
     """Base class for LLM-based translators like Gemini and OpenAI."""
     
