@@ -14,6 +14,8 @@ Message("hqm_title").title()
 
 st.divider()
 Message("hqm_readme").info()
+Message("hqm_format_header").subheader()
+Message("hqm_format_body").send()
 Message("hqm_encoding_warning").warning()
 
 with st.form("hqm_task_form"):

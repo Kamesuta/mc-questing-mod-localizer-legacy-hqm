@@ -1,6 +1,6 @@
 {
     "home_title": "마인크래프트 퀘스트 모드 로컬라이저",
-    "home_about": "HQM Localizer는 Hardcore Questing Mode 1.7.10의 `quests.hqm` 파일을 번역하는 웹 어플리케이션입니다.\n퀘스트 텍스트를 추출하고 번역한 뒤, 번역된 텍스트를 `.hqm` 파일에 다시 씁니다.",
+    "home_about": "HQM Localizer는 Hardcore Questing Mode 1.7.10의 `quests.hqm` 파일을 번역하는 Streamlit 웹 앱입니다.\n\n이 프로젝트는 https://github.com/peunsu/mc-questing-mod-localizer의 포크이며, HQM의 레거시 포맷에 특화되어 있습니다.",
     "home_title_1": "OpenAI GPT가 찾아왔어요!",
     "home_desc_1": "OpenAI GPT는 높은 품질의 번역을 제공하는 대형 언어 모델입니다. [여기](https://platform.openai.com/signup)에서 무료 OpenAI API 키를 받아 퀘스트 파일을 번역해보세요.",
     "home_title_2": "번역 수정 도구를 사용해보세요.",
@@ -24,7 +24,7 @@
     "bqm_readme": "### Read Me\n\n- **퀘스트 파일** (`DefaultQuests.json`)은 모드팩의 `config/betterquesting` 폴더에 있습니다.\n\n- **언어 파일** (`.lang`)은 모드팩의 `resources/betterquesting/lang` 폴더에 있습니다. 모드팩에 따라 폴더 위치가 다를 수 있습니다.",
     "translation_fixer_title": "번역 수정 도구",
     "hqm_title": "Hardcore Questing Mode 로컬라이저",
-    "hqm_readme": "### Read Me\n\n- HQM 퀘스트 폴더의 `quests.hqm` 파일을 업로드하세요.\n\n- 이 도구는 번역된 텍스트를 `.hqm` 파일 내부에 직접 씁니다. HQM 1.7.10은 FTB Quests나 Better Questing과 같은 외부 언어 파일 방식을 안정적으로 지원하지 않습니다.\n\n- 퀘스트 이름과 태스크 이름에는 엄격한 byte 제한이 있어, 긴 번역은 잘릴 수 있습니다.",
+    "hqm_readme": "### Read Me\n\n- 이 프로젝트는 Hardcore Questing Mode 1.7.10 `quests.hqm` 파일에 특화되어 있습니다.\n\n- 변경 사항을 적용하기 전에 항상 원본 `quests.hqm` 파일의 **백업**을 보관하세요.\n\n- 이 도구는 번역을 `.hqm` 파일에 직접 쓰며 외부 언어 파일을 사용하지 않습니다.\n\n- 퀘스트 및 태스크 이름에는 엄격한 바이트 제한이 있으며, 긴 번역은 잘릴 수 있습니다.",
     "hqm_encoding_warning": "퀘스트 파일을 로드할 때 글자가 깨지는(mojibake) 것을 방지하려면, JVM 인수에 `-Dfile.encoding=UTF-8`이 추가되어 있는지 확인하세요.",
     "translation_fixer_readme": "### Read Me\n\n- 언어 파일의 번역 문제(누락된 번역 또는 잘못된 번역)를 해결하기 위한 도구입니다.\n\n- 언어 파일을 업로드하고 수정할 텍스트를 선택하세요. 그러면 선택된 텍스트가 번역 서비스를 사용하여 다시 번역됩니다.",
     "modpack_name_header": "모드팩 이름",
@@ -78,5 +78,7 @@
     "user_guide_bqm_2": "* `{source_lang}.lang`과 `{target_lang}.lang`을 다운로드합니다.\n\n* `{source_lang}.lang`과 `{target_lang}.lang`을 `resources/betterquesting/lang` 폴더 (또는 원본 언어 파일이 위치하는 폴더)에 넣습니다.\n\n* 완료! 잘못 번역된 텍스트를 수정하고 싶다면 `{target_lang}.lang`을 텍스트 에디터로 편집하세요.",
     "user_guide_bqm_3": "* `{source_lang}.lang`을 다운로드합니다.\n\n* `{source_lang}.lang`을 `resources/betterquesting/lang` 폴더 (또는 원본 언어 파일이 위치하는 폴더)에 넣습니다.\n\n* 완료!",
     "hqm_user_guide_extract": "* 원본 JSON 파일을 다운로드합니다.\n\n* 번역하거나 수정한 뒤, 적용 옵션으로 이 도구를 다시 실행하세요.",
-    "hqm_user_guide_apply": "* `quests.hqm`을 다운로드합니다.\n\n* 기존 HQM `quests.hqm` 파일을 다운로드한 파일로 교체하세요. 원본 파일은 백업해두는 것을 권장합니다."
+    "hqm_user_guide_apply": "* `quests.hqm`을 다운로드합니다.\n\n* 기존 HQM `quests.hqm` 파일을 다운로드한 파일로 교체하세요. 원본 파일은 백업해두는 것을 권장합니다.",
+    "hqm_format_header": "지원되는 포맷",
+    "hqm_format_body": "- Hardcore Questing Mode 1.7.10\n- `quests.hqm`"
 }

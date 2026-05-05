@@ -1,6 +1,6 @@
 {
     "home_title": "Minecraft Questing Mod Localizer",
-    "home_about": "HQM Localizer is a web application that helps you translate Hardcore Questing Mode 1.7.10 `quests.hqm` files.\nIt extracts quest text, translates it, and writes the translated text back into the `.hqm` file.",
+    "home_about": "HQM Localizer is a Streamlit web app for translating Hardcore Questing Mode 1.7.10 `quests.hqm` files.\n\nThis project is a fork of https://github.com/peunsu/mc-questing-mod-localizer, specialized for HQM’s legacy format.",
     "home_title_1": "OpenAI GPT is here!",
     "home_desc_1": "OpenAI GPT is a large language model that provides high-quality translations. You can get a free OpenAI API key from [here](https://platform.openai.com/signup) and translate your quest files with it.",
     "home_title_2": "Introducing Translation Fixer",
@@ -24,7 +24,7 @@
     "bqm_readme": "### Read Me\n\n- **Quest file** (`DefaultQuests.json`) is in the `config/betterquesting` folder of the modpack.\n\n- **Language files** (`.lang`) are in the `resources/betterquesting/lang` folder of the modpack. The directory may vary depending on the modpack.",
     "translation_fixer_title": "Translation Fixer",
     "hqm_title": "Hardcore Questing Mode Localizer",
-    "hqm_readme": "### Read Me\n\n- Upload the `quests.hqm` file from your HQM quest folder.\n\n- This tool translates text directly inside the `.hqm` file. HQM 1.7.10 does not reliably support the same external language-file workflow as FTB Quests or Better Questing.\n\n- Quest and task names have strict byte limits, so long translations may be shortened.",
+    "hqm_readme": "### Read Me\n\n- This project is specialized for Hardcore Questing Mode 1.7.10 `quests.hqm` files.\n\n- Always keep a **backup** of the original `quests.hqm` before applying changes.\n\n- This tool writes translations directly into the `.hqm` file and does not use external language files.\n\n- Quest and task names have strict byte limits; long translations may be truncated.",
     "hqm_encoding_warning": "To prevent character corruption (mojibake) when loading quest files in Minecraft, ensure that `-Dfile.encoding=UTF-8` is added to your JVM arguments.",
     "translation_fixer_readme": "### Read Me\n\n- This tool is designed to address translation issues in language files, such as missing or incorrect translations.\n\n- By uploading a language file and selecting the text you want to fix, the selected text will be re-translated using translation services.",
     "modpack_name_header": "Modpack Name",
@@ -78,5 +78,7 @@
     "user_guide_bqm_2": "* Download `{source_lang}.lang` and `{target_lang}.lang`.\n\n* Place `{source_lang}.lang` and `{target_lang}.lang` in `resources/betterquesting/lang` folder (or the folder where the original lang files are placed).\n\n* Done! If you want to fix mistranslated text, edit `{target_lang}.lang` with your text editor.",
     "user_guide_bqm_3": "* Download `{source_lang}.lang`.\n\n* Place `{source_lang}.lang` in `resources/betterquesting/lang` folder (or the folder where the original lang files are placed).\n\n* Done!",
     "hqm_user_guide_extract": "* Download the source JSON file.\n\n* Translate or edit it, then run this tool again with the apply option.",
-    "hqm_user_guide_apply": "* Download `quests.hqm`.\n\n* Replace the original HQM `quests.hqm` with the downloaded file. Keep a backup of the original file."
+    "hqm_user_guide_apply": "* Download `quests.hqm`.\n\n* Replace the original HQM `quests.hqm` with the downloaded file. Keep a backup of the original file.",
+    "hqm_format_header": "Supported Format",
+    "hqm_format_body": "- Hardcore Questing Mode 1.7.10\n- `quests.hqm`"
 }
