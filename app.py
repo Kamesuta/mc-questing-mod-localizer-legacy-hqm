@@ -13,18 +13,11 @@ logging.basicConfig(
 )
 logging.getLogger("httpx").setLevel(logging.WARNING)  # Suppress httpx logs
 
-home_page = st.Page("pages/0_home.py", title="Home", icon="🏠")
-ftbq_page = st.Page("pages/1_ftbq.py", title="FTB Quests Localizer", icon="👑")
-ftbq_new_page = st.Page("pages/2_ftbq_new.py", title="FTB Quests Localizer (1.21+)", icon="⭐")
-bqm_page = st.Page("pages/3_bqm.py", title="Better Questing Localizer", icon="📖")
-translation_fixer_page = st.Page("pages/4_translation_fixer.py", title="Translation Fixer", icon="🛠️")
+hqm_page = st.Page("pages/1_hqm.py", title="HQM Localizer", icon="📖")
 
 pg = st.navigation(
     {
-        "Main": [home_page],
-        "FTB Quests": [ftbq_page, ftbq_new_page],
-        "Better Questing": [bqm_page],
-        "Translation Fixer": [translation_fixer_page],
+        "Hardcore Questing Mode": [hqm_page],
     },
     position='top'
 )
@@ -38,12 +31,11 @@ st.set_page_config(
             "Get help": "https://github.com/peunsu/mc-questing-mod-localizer",
             "Report a Bug": "https://github.com/peunsu/mc-questing-mod-localizer/issues",
             "About": '''
-            ### Minecraft Questing Mod Localizer\n
+            ### HQM Localizer\n
             [![GitHub Release](https://img.shields.io/github/v/release/peunsu/mc-questing-mod-localizer?style=for-the-badge)](https://github.com/peunsu/mc-questing-mod-localizer/releases/latest)\n
             **[MIT License](https://github.com/peunsu/mc-questing-mod-localizer/blob/main/LICENSE) ⓒ 2024-2025 [peunsu](https://github.com/peunsu)**\n
             ### Credits\n
-            * **[FTB Quests](https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge) by [FTB Team](https://www.curseforge.com/members/ftb)**\n
-            * **[Better Questing](https://www.curseforge.com/minecraft/mc-mods/better-questing) by [Funwayguy](https://www.curseforge.com/members/funwayguy)**\n
+            * **Hardcore Questing Mode**\n
             ### Dependencies\n
             * [streamlit](https://github.com/streamlit/streamlit): A tool to build and share the web application with Python.
             * [googletrans](https://github.com/ssut/py-googletrans): Google translate API for Python.

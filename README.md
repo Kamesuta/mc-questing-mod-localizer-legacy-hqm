@@ -1,40 +1,30 @@
-# Minecraft Questing Mod Localizer
+# HQM Localizer
 
-![GitHub Release](https://img.shields.io/github/v/release/peunsu/mc-questing-mod-localizer?style=for-the-badge)
+HQM Localizer is a Streamlit web app for translating Hardcore Questing Mode 1.7.10 `quests.hqm` files.
 
-Minecraft Questing Mod Localizer is a web application that helps you to localize quest files of Minecraft questing mods.
-You can convert quest files to localizable format, translate quest files to other languages, and apply the translated quest files to the modpack.
-This application supports [FTB Quests](https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge) and [Better Questing](https://www.curseforge.com/minecraft/mc-mods/better-questing).
+It reads HQM's bit-packed binary quest format, extracts translatable text to JSON, translates it with a selected translation service, and writes the translated text back into a new `quests.hqm`.
 
-* Web App: https://mc-questing-mod-localizer.streamlit.app
+## Supported Format
 
-# Installation
-* **Python 3.10** is required
-* Clone the repo:
+- Hardcore Questing Mode 1.7.10
+- `quests.hqm`
+- Tested with a `CUSTOM_PRECISION_TYPES` file version sample
+
+## Installation
+
+Python 3.10 is required.
+
 ```bash
-$ git clone https://github.com/peunsu/mc-questing-mod-localizer
-```
-* Change directory:
-```bash
-$ cd mc-questing-mod-localizer
-```
-* Create the virtual environment (optional):
-```bash
-$ python -m venv venv
-$ source venv/bin/activate
-```
-* Install requirements:
-```bash
-$ pip install -r requirements.txt
-```
-* Run the application:
-```bash
-$ streamlit run app.py
+git clone https://github.com/peunsu/mc-questing-mod-localizer
+cd mc-questing-mod-localizer
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-# Dependencies
-* [streamlit](https://github.com/streamlit/streamlit): A tool to build and share the web application with Python.
-* [googletrans](https://github.com/ssut/py-googletrans): Google translate API for Python.
-* [deepl-python](https://github.com/DeepLcom/deepl-python): DeepL API client for Python.
-* [langchain](https://github.com/langchain-ai/langchain): A framework for developing applications powered by language models.
-* [ftb-snbt-lib](https://github.com/peunsu/ftb-snbt-lib): Python library to parse, edit, and save FTB snbt tag.
+## Notes
+
+- Keep a backup of the original `quests.hqm`.
+- HQM has strict byte limits for some fields. Long translated quest names or task names may be shortened.
+- This tool writes translated text directly into `.hqm`; it does not use the FTB Quests or Better Questing external language-file workflow.
