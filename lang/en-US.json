@@ -25,6 +25,7 @@
     "translation_fixer_title": "Translation Fixer",
     "hqm_title": "Hardcore Questing Mode Localizer",
     "hqm_readme": "### Read Me\n\n- Upload the `quests.hqm` file from your HQM quest folder.\n\n- This tool translates text directly inside the `.hqm` file. HQM 1.7.10 does not reliably support the same external language-file workflow as FTB Quests or Better Questing.\n\n- Quest and task names have strict byte limits, so long translations may be shortened.",
+    "hqm_encoding_warning": "To prevent character corruption (mojibake) when loading quest files in Minecraft, ensure that `-Dfile.encoding=UTF-8` is added to your JVM arguments.",
     "translation_fixer_readme": "### Read Me\n\n- This tool is designed to address translation issues in language files, such as missing or incorrect translations.\n\n- By uploading a language file and selecting the text you want to fix, the selected text will be re-translated using translation services.",
     "modpack_name_header": "Modpack Name",
     "modpack_name_label": "Enter the shortened name of the modpack. [Example: All the Mods 9 → atm9]",

@@ -26,5 +26,6 @@ streamlit run app.py
 ## Notes
 
 - Keep a backup of the original `quests.hqm`.
+- To prevent character corruption (mojibake) when loading quest files in Minecraft, ensure that `-Dfile.encoding=UTF-8` is added to your JVM arguments.
 - HQM has strict byte limits for some fields. Long translated quest names or task names may be shortened.
 - This tool writes translated text directly into `.hqm`; it does not use the FTB Quests or Better Questing external language-file workflow.

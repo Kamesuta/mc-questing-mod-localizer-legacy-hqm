@@ -25,6 +25,7 @@
     "translation_fixer_title": "번역 수정 도구",
     "hqm_title": "Hardcore Questing Mode 로컬라이저",
     "hqm_readme": "### Read Me\n\n- HQM 퀘스트 폴더의 `quests.hqm` 파일을 업로드하세요.\n\n- 이 도구는 번역된 텍스트를 `.hqm` 파일 내부에 직접 씁니다. HQM 1.7.10은 FTB Quests나 Better Questing과 같은 외부 언어 파일 방식을 안정적으로 지원하지 않습니다.\n\n- 퀘스트 이름과 태스크 이름에는 엄격한 byte 제한이 있어, 긴 번역은 잘릴 수 있습니다.",
+    "hqm_encoding_warning": "퀘스트 파일을 로드할 때 글자가 깨지는(mojibake) 것을 방지하려면, JVM 인수에 `-Dfile.encoding=UTF-8`이 추가되어 있는지 확인하세요.",
     "translation_fixer_readme": "### Read Me\n\n- 언어 파일의 번역 문제(누락된 번역 또는 잘못된 번역)를 해결하기 위한 도구입니다.\n\n- 언어 파일을 업로드하고 수정할 텍스트를 선택하세요. 그러면 선택된 텍스트가 번역 서비스를 사용하여 다시 번역됩니다.",
     "modpack_name_header": "모드팩 이름",
     "modpack_name_label": "모드팩 이름을 짧게 줄여서 입력하세요. [예시: All the Mods 9 → atm9]",

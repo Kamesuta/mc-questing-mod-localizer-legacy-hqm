@@ -14,6 +14,7 @@ Message("hqm_title").title()
 
 st.divider()
 Message("hqm_readme").info()
+Message("hqm_encoding_warning").warning()
 
 with st.form("hqm_task_form"):
     Message("modpack_name_header").subheader()
