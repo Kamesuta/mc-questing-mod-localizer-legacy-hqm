@@ -13,10 +13,12 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)  # Suppress httpx logs
 
 hqm_page = st.Page("pages/1_hqm.py", title="HQM Localizer", icon="📖")
+lexicon_wrap_page = st.Page("pages/2_lexicon_wrap.py", title="Lexicon Wrapper", icon="📚")
 
 pg = st.navigation(
     {
         "Hardcore Questing Mode": [hqm_page],
+        "Language Utilities": [lexicon_wrap_page],
     },
     position='top'
 )
